@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --pale-blue-alpha: hsla(225, 100%, 94%, 20%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+
+/*Global Styles*/
+
+* {
+    font-family: "Red Hat Display";
+    color: var(--desaturated-blue);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #D6E1FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*Typography*/
+
+.summary > h1 {
+    font-weight: 900;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 1.3rem;
+}
+
+.summary > p {
+    width: 90%;
+    font-size: .9rem;
+    margin-inline: auto;
+}
+
+.bold {
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.plan-section a {
+    margin-left: 1.7rem;
+    margin-block: auto;
+    color: var(--bright-blue);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/*Layout*/
+
+.container {
+    margin-inline: auto;
+    height: 32rem;
+    width: 19.8rem;
+}
+
+.container > img {
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+
+.summary {
+    height: 70%;
+    padding: 1.3rem;
+    font-size: 15px;
+    border-radius: 0 0 1.5rem 1.5rem;
+    background-color: var(--very-pale-blue);
+    text-align: center;
+}
+
+.plan-section {
+    display: flex;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+    background-color: var(--pale-blue-alpha);
+}
+
+@media (min-width: 376px) {
+    .container {
+        width: 22rem;
+    }
+}
+
+
+/*Components*/
+
+.btn-section {
+    display: block;
+}
+
+.btn-payment {
+    width: 100%;
+    height: 2.8rem;
+    background-color: var(--bright-blue);
+    font-size: .9rem;
+    font-weight: bold;
+    box-shadow: .1rem 1rem .4rem var(--pale-blue);
+    color: var(--very-pale-blue);
+    border-radius: 10px;
+    border: 0;
+}
+
+.txt-cancel {
+    width: 35%;
+    margin-top: 1.2rem;
+    margin-inline: auto;
+    font-weight: 900;
+    font-size: .9rem;
+}
+
+
+/*Active States*/
+
+.btn-payment:hover {
+    cursor: pointer;
+    background-color: hsl(245, 83%, 63%);
+}
+
+.txt-cancel:hover {
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+.plan-section a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(245, 83%, 63%);
+}
