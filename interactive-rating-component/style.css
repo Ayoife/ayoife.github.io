@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+
+/*Global Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Overpass";
+    font-size: .95rem;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Typography*/
+
+h1 {
+    color: var(--white);
+    font-size: 1.5em;
+    margin-block: 1rem;
+    font-weight: 700;
+}
+
+.text {
+    font-size: .9rem;
+}
+
+
+/*Layout*/
+
+.container {
+    background-color: var(--dark-blue);
+    position: relative;
+    color: var(--light-grey);
+    width: 310px;
+    height: 334px;
+    padding: 1.3rem;
+    border-radius: 1rem;
+    margin-inline: auto;
+}
+
+#thank-you {
+    display: none;
+    text-align: center;
+}
+
+#thank-you > * {
+    margin-inline: auto;
+}
+
+#thank-you img {
+    margin: 1rem;
+    margin-right: 2rem;
+}
+
+.selected {
+    background-color: hsl(213, 19%, 22%);
+    color: var(--orange);
+    padding: 5px 0;
+    border-radius: 1rem;
+    width: 12rem;
+}
+
+
+/*Components*/
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1.7rem;
+}
+
+.circle {
+    background-color: hsl(213, 19%, 22%);
+    color: var(--medium-grey);
+    font-weight: bold;
+    font-size: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 15px;
+    margin-block: .5rem;
+}
+
+button {
+    background-color: var(--orange);
+    color: var(--white);
+    width: 100%;
+    height: 2.8rem;
+    font-size: .9rem;
+    letter-spacing: 2px;
+    border: 0;
+    border-radius: 1.5rem;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--light-grey);
+    position: fixed;
+    bottom: 10px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    font-size: 11px; 
+}
+
+@media (min-width: 376px) {
+    .container {
+        width: 350px;
+        padding: 1.7rem;
+    }
+
+    .circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .rating {
+        margin-block: 1.5rem;
+    }
+
+    #thank-you {
+        padding: 1.5rem;
+        width: 370px;
+    }
+
+    #thank-you h1 {
+        font-size: 1.7em;
+    }
+}
+
+
+/*Animations*/
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }    
+}
+
+.shake {
+    width: 85%;
+    position: absolute;
+    animation-name: shake;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1s;
+}
+
+.zoom {
+    position: fixed;
+    animation-name: zoom;
+    animation-duration: 1s;
+    animation-iteration-count: 1s;
+}
+
+/*Active States*/
+
+.hov, 
+button:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.circle.hov:hover {
+    background-color: var(--orange)!important; 
+    color: var(--white)!important;
+}
