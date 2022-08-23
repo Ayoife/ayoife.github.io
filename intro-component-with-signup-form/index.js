@@ -57,6 +57,7 @@ function validateForm() {
     if (!valid(email) && email != '') {
         errorFound = true;
         EmailInput.style.border = `2px solid ${RED}`
+        EmailInput.style.color = RED
         EmError.innerText = "Looks like this is not an email"
         EmailInput.classList.add("input-error")
         EmError.style.display = "block"
@@ -74,11 +75,12 @@ function validateForm() {
         for (let input of inputs) {
             input.value = ''
         }
+        EmailInput.style.color = BLACK
     }
 }
 
 function valid(email) {
-    pattern = /[a-zA-Z0-9]+@[a-z]+\.tld/
+    pattern = /[a-zA-Z0-9]+@[a-z]+\.[a-z]{3,}/
     if (pattern.test(email)) {
         return true
     }

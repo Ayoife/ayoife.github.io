@@ -62,6 +62,7 @@ form > p strong {
     border: 2px solid var(--red);
     background-image: url("images/icon-error.svg");
     background-repeat: no-repeat;
+    background-attachment: scroll;
     background-position: right;
     background-position-x: calc(100% - 20px);
 }
@@ -95,6 +96,7 @@ form input {
 }
 
 form input:focus {
+    color: black;
     border: 2px solid black;
 }
 
