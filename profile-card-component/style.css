@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark-gray: hsl(0, 0%, 59%);
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+}
+
+
+/*Global Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--dark-gray);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--dark-cyan);
+    background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: -150px -200px, 150px 400px;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Typography*/
+
+.social-section {
+    font-size: .8rem;
+}
+
+b {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: bold;
+    font-size: 1.5rem !important;
+}
+
+
+/*Layout*/
+
+.container {
+    margin-block: auto;
+    height: 23rem;
+    width: 20rem;
+    font-size: 1.2rem;
+    position: relative;
+    border-radius: 15px;
+    background-color: white;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.bg-card {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.profile-photo {
+    position: absolute;
+    left: calc(50% - 48px);
+    top: calc(35% - 48px);
+    border-radius: 50%;
+    box-shadow: .05rem .05rem 0 .5rem white;
+}
+
+.profile {
+    margin-inline: auto;
+    margin-top: 4rem;
+    width: 80%;
+    text-align: center;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-block: 5px;
+    color: var(--dark-grayish-blue);
+}
+.place {
+    font-size: 1.1rem;
+}
+
+.social-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    margin-top: 23px;
+    padding-block: 22px;
+    border-top: .5px solid var(--dark-gray);
+}
+
+.social-section > * {
+    text-align: center;
+}
+
+.social-section span {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/*Components*/
+
+.attribution { 
+    font-size: 11px; 
+    color: black;
+    text-align: center;
+    position: fixed;
+    bottom: 10px; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 600px) {
+    body {
+        background-size: 60%;
+        background-position: -200px -300px, calc(100% + 100px) 300px;
+    }
+}
