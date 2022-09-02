@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+}
+
+
+/*Global Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Typography*/
+
+h1 {
+    color: var(--very-dark-magenta);
+    font-size: 2rem;
+    font-weight: 700;
+    width: 80%;
+    margin-inline: auto;
+    margin-bottom: .5rem;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--dark-grayish-magenta);
+}
+
+.title p {
+    font-weight: 500;
+    width: 90%;
+    margin-inline: auto;
+}
+
+b {
+    font-weight: normal;
+    color: var(--soft-pink);
+}
+
+
+/*Layout*/
+
+.container {
+    width: 90%;
+    height: 90%;
+    margin-block: 4rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.ratings {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: hsla(302, 10%, 53%, 0.2);
+    color: var(--very-dark-magenta);
+    text-align: center;
+    height: 4rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.rating > p {
+    font-weight: bold;
+}
+
+.star {
+    height: 1.2rem;
+    width: 1.2rem;
+    background-image: url("images/icon-star.svg");
+    background-repeat: no-repeat;
+}
+
+.stars {
+    display: flex;
+    justify-content: space-evenly;
+    width: 9rem;
+    margin-inline: auto;
+}
+
+.stars > * {
+    flex-basis: 1;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.7rem;
+    width: 100%;
+    height: 12rem;
+    max-width: 21rem;
+    font-size: 1rem;
+    margin-inline: auto;
+    background-color: var(--very-dark-magenta);
+    color: var(--light-grayish-magenta);
+    border-radius: 5px;
+}
+
+.c1 {
+    margin: 0;
+}
+
+.c3 {
+    margin-right: 0;
+}
+
+.profile-name {
+    display: flex;
+    gap: 1rem;
+}
+
+.profile-name > img {
+    width: 40px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.profile-name > p,
+.card > p {
+    margin-block: auto;
+}
+
+.profile-name > p {
+    font-weight: bold;
+}
+
+
+/*Components*/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 531px) {
+    h1 {
+        font-size: 2.5rem;
+        width: 80%;
+        margin-inline: auto;
+    }
+
+    .cards {
+        margin-top: 2rem;
+    }
+
+    .card {
+        width: 25rem;
+        height: 15rem;
+        font-size: 1.3rem;
+    }
+
+    .rating {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .rating p {
+        font-size: 1.2rem;
+    }
+
+    .stars {
+        margin: 0;
+    }
+
+    .profile-name > img {
+        width: 45px;
+    }
+
+}
+
+@media (min-width: 950px) {
+    body {
+        background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: left top, right bottom;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.8rem;
+        width: 70%;
+        margin-bottom: 1rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .info-header {
+        display: flex;
+        justify-content: center;
+        max-height: 265px;
+    }
+
+    .info-header > * {
+        flex-basis: 40%;
+    }
+
+    .title {
+        margin: 0;
+        max-width: 487px;
+        text-align: left;
+    }
+
+    .title > p {
+        width: 80%;
+        font-weight: 500;
+        margin-left: 0;
+    }
+
+    .stars {
+        margin: 0;
+    }
+
+    .ratings {
+        justify-content: center;
+        max-width: 550px;
+    }
+
+    .rating {
+        flex-direction: row;
+        align-items: center;
+        height: 3rem;
+        width: 28rem;
+        font-size: 1rem;
+        justify-content: space-evenly;
+    }
+
+    .r2 {
+        margin-left: 3rem;
+    }
+
+    .r3 {
+        margin-left: 6rem;
+    }
+
+    .cards {
+        margin-top: 3rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 0;
+        font-size: 1rem;
+        width: 21rem;
+        height: 13rem;
+    }
+
+    .profile-name > img {
+        width: 40px;
+    }
+
+    .c2 {
+        margin-top: 1rem;
+    }
+
+    .c3 {
+        margin-top: 2rem;
+    }
+}
