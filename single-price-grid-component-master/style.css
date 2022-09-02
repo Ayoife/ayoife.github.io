@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+}
+
+
+/*Global Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-gray);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Typography*/
+
+.header {
+    color: white;
+    font-weight: bold;
+    margin-bottom: .7rem;
+    font-size: 1.1rem;
+}
+
+.title {
+    color: var(--bright-yellow);
+    font-weight: bold;
+    font-size: .9rem;
+    margin-block: 1.2rem;
+}
+
+.info-section .header {
+    color: var(--cyan);
+}
+
+.subscribe-section .header {
+    margin-bottom: .9rem;
+}
+
+.subscribe-section span {
+    color: var(--light-gray);
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+b {
+    font-size: 1.8rem;
+    margin: 0px 8px 8px 0px;
+}
+
+/*Layout*/
+
+.container { 
+    font-family: 'Karla', sans-serif;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    color: var(--light-gray);
+    box-shadow: .5rem .5rem 1rem hsla(218, 22%, 67%, 0.5);
+    font-size: .9rem;
+    border-radius: 5px;
+}
+
+.container > * {
+    flex: 1;
+}
+
+.info-section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 5px 5px 0 0;
+    color: var(--grayish-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subscribe-section {
+    background-color: hsl(179, 62%, 39%);
+    padding: 1.5rem;
+}
+
+.why-section {
+    background-color: var(--cyan);
+    padding: 1.5rem;
+    border-radius: 0px 0px 5px 5px;
+}
+
+/*Components*/
+
+button {
+    background-color: var(--bright-yellow);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
+    box-shadow: .3rem .3rem 1rem hsla(218, 22%, 67%, 0.3);
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: hsl(71, 73%, 45%);
+    cursor: pointer;
+}
+
+@media (min-width: 900px) {
+    .container {
+        width: 45%;
+        height: 65%;
+        max-width: 650px;
+    }
+
+    .container > * {
+        flex-basis: 50%;
+    }
+
+    .flex-desktop {
+        display: flex;
+    }
+
+    .flex-desktop > * {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    .info-section {
+        padding-inline: 2rem;
+    }
+
+    .subscribe-section {
+        padding-inline: 2rem;
+        border-radius: 0 0 0 5px;
+    }
+
+    .why-section {
+        border-radius: 0 0 5px 0;
+        padding-inline: 2rem;
+    }
+}
+
+@media (min-width: 550px) {
+    .container {
+        width: 60%;
+    }
+}
