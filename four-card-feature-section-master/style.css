@@ -60,6 +60,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: Poppins, sans-serif;
+    max-width: 500px;
 }
 
 .header {
@@ -128,17 +129,13 @@ body {
 }
 
 
-@media (min-width: 500px) {
+@media (min-width: 960px) {
     .info {
         margin-inline: auto;
     }
 
     .title1 {
         font-size: 1.6rem;
-    }
-
-    .header {
-        width: 55%;
     }
 
     .cards {
