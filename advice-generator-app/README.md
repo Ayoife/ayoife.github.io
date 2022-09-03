@@ -40,3 +40,4 @@ Users should be able to:
 
 ## Acknowledgments
 
+I would like to thank [@KevinPowell](https://www.youtube.com/kevinpowell) for his amazing webDev tutorials and for introducing me to this awesome website (https://www.frontendmentor.io)
