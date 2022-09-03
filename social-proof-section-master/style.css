@@ -127,7 +127,7 @@ b {
     margin-inline: auto;
     background-color: var(--very-dark-magenta);
     color: var(--light-grayish-magenta);
-    border-radius: 5px;
+    border-radius: 14px;
 }
 
 .c1 {
