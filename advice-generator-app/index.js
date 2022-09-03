@@ -17,7 +17,7 @@ function main() {
 
 async function change_advice() {
     try {
-        const response = await fetch("https://api.adviceslip.com/advice")
+        const response = await fetch("https://api.adviceslip.com/advice", {cache: 'no-cache'})
         let data = await response.json()
         console.log(data)
         animation = animations[Math.floor(Math.random() * animations.length)]
