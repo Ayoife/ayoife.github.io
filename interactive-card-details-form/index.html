@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" async></script>
+</head>
+
+<body>
+  <main>
+    <section class="section-bg">
+      <div class="card-back">
+        <img class="back" src="images/bg-card-back.png" alt="">
+        <p class="back-number">000</p>
+      </div>
+      <div class="card-front">
+        <img class="front" src="images/bg-card-front.png" alt="">
+        <div class="front-logo"></div>
+        <p class="card-number">0000 0000 0000 0000</p>
+        <div class="name-date">
+          <p id="name">JANE APPLESEED</p>
+          <p id="date">00/00</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-form">
+      <form>
+        <div>
+          <label for="card-name">CARDHOLDER NAME</label>
+          <input id="c-name" type="text" maxlength="25" placeholder="e.g. Jane Appleseed">
+          <p id="name-error" class="error">Can't be empty</p>
+        </div>
+
+        <div>
+          <label for="card-number">CARD NUMBER</label>
+          <input id="c-number" type="text" placeholder="e.g. 1234 5678 9123 0000">
+          <p id="number-error" class="error">Can't be empty</p>
+        </div>
+      
+        <div class="input-3">
+          <div class="expiry">
+            <label for="exp-date">EXP. DATE (MM/YY)</label>
+            <div class="date">
+              <input id="exp-month" type="number" maxlength="2" min="1" max="12" placeholder="MM">
+              <input id="exp-year" type="number" maxlength="4" min="1000" max="9999" placeholder="YY">
+            </div>
+            <p id="exp-error" class="error">Can't be empty</p>
+          </div>
+          <div class="cvc">
+            <label for="cvc">CVC</label>
+            <input id="c-cvc" type="number" placeholder="e.g. 123">
+            <p id="cvc-error" class="error">Can't be empty</p>
+          </div>
+        </div>
+
+        <button id="confirm" type="button" role="button">Confirm</button> 
+      </form>
+    </section>
+
+    <section class="section-thank-you">
+      <div class="container">
+        <img src="images/icon-complete.svg" alt="">
+        <h1>THANK YOU!</h1>
+        <p>We've added your card details</p>
+        <button id="continue" role="button" type="button">Continue</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
