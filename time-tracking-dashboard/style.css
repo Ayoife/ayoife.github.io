@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --blue: hsl(246, 80%, 60%);
+    --light-red: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --red: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+}
+
+/*Global Styles*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+   border-radius: 1rem;
+   max-width: 330px; 
+}
+
+
+/*Typography*/
+
+.name > div > span {
+    color: var(--pale-blue);
+    font-size: 1.2rem;
+}
+
+.name > div > p {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.timeframes > p {
+    color: var(--desaturated-blue);
+    font-size: 1.2rem;
+}
+
+.act-title > * {
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.dot {
+    color: var(--pale-blue);
+    font-size: 2rem;
+}
+
+.time > h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.time > p {
+    color: var(--pale-blue);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/*Layout*/
+
+main {
+    width: 85%;
+    height: 90%;
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    margin-block: 2rem;
+}
+
+.title {
+    height: 12rem;
+    width: 100%;
+    margin-inline: auto;
+    background-color: var(--dark-blue);
+}
+
+
+.name {
+    background-color: var(--blue);
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    height: 70%;
+}
+
+.name img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.name > div {
+    margin-left: 1rem;
+}
+
+.timeframes {
+    display: flex;
+    justify-content: space-evenly;
+    height: 30%;
+    align-items: center;
+}
+
+.activities {
+    position: relative;
+    width: 100%;
+    height: 10rem;
+}
+
+.act-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+    position: absolute;
+    background-color: var(--dark-blue);
+    top: 27%;
+    width: 100%;
+    height: 73%;
+    border-radius: 1rem;
+    padding: 1.1rem;
+}
+
+.time, .act-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dot {
+    position: absolute;
+    top: 10%;
+    right: 7%;
+}
+
+.work, .play, .study, .exercise, .social, .selfcare {
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.work {
+    background-color: var(--light-red);
+    background-image: url("images/icon-work.svg");
+}
+.play {
+    background-color: var(--soft-blue);
+    background-image: url("images/icon-play.svg");
+}
+.study {
+    background-color: var(--red);
+    background-image: url("images/icon-study.svg");
+}
+.exercise {
+    background-color: var(--lime-green);
+    background-image: url("images/icon-exercise.svg");
+}
+.social {
+    background-color: var(--violet);
+    background-image: url("images/icon-social.svg");
+}
+.selfcare {
+    background-color: var(--soft-orange);
+    background-image: url("images/icon-self-care.svg");
+}
+
+.timeframes > *, .act-container, .dot:hover {
+    cursor: pointer;
+}
+.timeframes > *:hover {
+    color: hsl(0, 0%, 85%) !important;
+}
+.dot:hover {
+    color: white;
+}
+.act-container:hover {
+    background-color: hsl(235, 48%, 33%);
+}
+
+
+/*Components*/
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 550px) {
+    main {
+        grid-template-columns: repeat(2, 14rem);
+    }
+
+    .activities {
+        max-width: 14rem;
+    }
+
+    .title {
+        grid-column: 1 / span 2;
+        width: 100%;
+        max-width: 28rem;
+    }
+
+    .time {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+
+    .dot {
+        top: -5%;
+        right: 10%;
+    }
+}
+
+@media (min-width: 950px) {
+    main {
+        grid-template-columns: repeat(4, 13rem);
+        grid-template-rows: repeat(2, 12rem);
+        gap: 1.2rem;
+    }
+
+    .title, .activities {
+        max-width: 13rem;
+    }
+
+    .title {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column: 1 / 2;
+        height: 100%;
+    }
+
+    .name {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 67%;
+    }
+
+    .name > div {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .name > div > p {
+        font-size: 2rem;
+    }
+
+    .timeframes {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding-inline: 1.5rem;
+        height: 33%;
+    }
+
+    .activities {
+        height: 12rem;
+        border-radius: 14px;
+    }
+
+    .act-container {
+        top: 20%;
+        height: 80%;
+        gap: 1rem;
+        border-radius: 14px;
+    }
+
+    .dot {
+        top: 5%;
+        right: 10%;
+    }
+
+    .time {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+
+    .time h2 {
+        font-size: 2.5rem;
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 10px;
+    }
+}
