@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" async></script>
+</head>
+
+<body>
+  <main>
+    <img class="logo" src="images/logo.svg">
+    <section class="container">
+      <form>
+        <div class="bill">
+          <label>Bill</label>
+          <div class="input-field">
+            <i class="bill-icon"></i>
+            <input type="number" placeholder="0">
+          </div>
+        </div>
+        <div class="tip">
+          <label>Select Tip %</label>
+          <div>
+            <button type="button">5%</button>
+            <button type="button">10%</button>
+            <button type="button">15%</button>
+            <button type="button">25%</button>
+            <button type="button">50%</button>
+            <input type="number" placeholder="Custom">
+          </div>
+        </div>
+        <div class="people">
+          <div class="labels">
+            <label>Number of People</label>
+            <label>Can't be Zero</label>
+          </div>
+          <div class="input-field">
+            <i class="peep-icon"></i>
+            <input type="number" placeholder="0">
+          </div>
+        </div>
+      </form>
+      <article>
+        <div>
+          <p>Tip Amount<br/><strong>/ person</strong></p>
+          <h2 id="tip">$0.00</h2>
+        </div>
+        <div>
+          <p>Total<br/><strong>/ person</strong></p>
+          <h2 id="total">$0.00</h2>
+        </div>
+        <button type="button">RESET</button>
+      </article>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Ayinde-Oladeinde Ayoife</a>.
+    </div>
+  </main>
+</body>
+</html>
