@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <div class="lightbox">
+  </div>
+  <section class="gallery">
+    <img class="close" src="images/icon-close.svg">
+    <span class="product-img"></span>
+    <img class="prev" src="images/icon-previous.svg">
+    <img class="next" src="images/icon-next.svg">
+    <div class="thumbnails">
+      <img src="images/image-product-1-thumbnail.jpg">
+      <img src="images/image-product-2-thumbnail.jpg">
+      <img src="images/image-product-3-thumbnail.jpg">
+      <img src="images/image-product-4-thumbnail.jpg">
+    </div>
+  </section>
+  <nav class="mobile-nav">
+    <img class="nav-close" src="images/icon-close.svg">
+    <div class="links">
+      <a href="#">Collections</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+  <header>
+    <div>
+      <img class="menu" src="images/icon-menu.svg">
+      <img class="logo" src="images/logo.svg">
+      <nav class="desktop-nav">
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <div class="cart-div">
+      <img class="cart" src="images/icon-cart.svg">
+      <img class="avatar" src="images/image-avatar.png">
+    </div>
+  </header>
+
+  <main>
+    <section class="image">
+      <span class="product-img"></span>
+      <img class="prev" src="images/icon-previous.svg">
+      <img class="next" src="images/icon-next.svg">
+      <div class="thumbnails">
+        <img src="images/image-product-1-thumbnail.jpg">
+        <img src="images/image-product-2-thumbnail.jpg">
+        <img src="images/image-product-3-thumbnail.jpg">
+        <img src="images/image-product-4-thumbnail.jpg">
+      </div>
+      <article class="cart-box">
+        <h1>Cart</h1>
+        <div class="items">
+          <p class="empty-cart">Your cart is empty.</p>
+          <!-- <div class="item">
+            <img class="thumbnail" src="images/image-product-1-thumbnail.jpg">
+            <p>Autumn Limited Edition Sneakers<br/>$125.00 x 3 <strong>$375.00</strong></p>
+            <img class="delete" src="images/icon-delete.svg">
+          </div>
+          <button id="checkout">Checkout</button> -->
+        </div>
+      </article>
+    </section>
+    <section class="main">
+      <h1>SNEAKER COMPANY</h1>
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable
+        rubber outer sole, they'll withstand everything the weather can offer.
+      </p>
+      <div class="prices">
+        <div>
+          <p class="price">$125.00</p>
+          <p class="discount">50%</p>
+        </div>
+        <p class="former-price">$250.00</p>
+      </div>
+      <div class="purchase">
+        <div class="number-items">
+          <img class="minus" src="images/icon-minus.svg">
+          <p>0</p>
+          <img class="plus" src="images/icon-plus.svg">
+        </div>
+        <div class="button">
+          <img src="images/icon-cart.svg">
+          <span>Add to cart</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Ayinde-Oladeinde Ayoife</a>.
+  </div>
+</body>
+</html>
