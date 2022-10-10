@@ -1,0 +1,142 @@
+:root {
+    --gold: rgb(243, 204, 10);
+    --purple: rgb(119, 10, 243);
+    --red: rgb(243, 29, 10);
+    --magenta: rgb(243, 10, 243);
+    --cream: rgb(250, 250, 226);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Monotype Corsiva", cursive;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, orange, purple, lightblue, green, gold, pink);
+    background-size: 400%;
+    animation: gradient 20s infinite alternate;
+}
+
+
+.card {
+    background-image: linear-gradient(45deg, var(--red), rgb(0, 155, 155), var(--purple), rgb(0, 255, 0), var(--gold), var(--magenta));
+    background-size: 400%;
+    padding: 2rem;
+    width: 316px;
+    height: 441px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    border-bottom-right-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
+    box-shadow: .1rem .1rem 2rem black;
+    animation: gradient 20s infinite alternate;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.first-page > *, .fourth-page > * {
+    text-align: center;
+}
+
+.second-page > *, .third-page > * {
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.second-page > * {
+    color: var(--cream);
+}
+
+.third-page > * {
+    color: black;
+}
+
+.fourth-page {
+    padding: 1rem;
+    border: 3px solid brown;
+    border-bottom-left-radius: 3.5rem;
+}
+
+.happy {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "century", sans-serif;
+    letter-spacing: 3px;
+    color: black;
+}
+
+.birthday {
+    font-size: 5rem;
+    font-weight: normal;
+    margin-block: 5rem;
+    color: var(--cream);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black
+}
+
+.mom {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: "century", sans-serif;
+    color: darkblue;
+}
+
+.text1, .text2 {
+    margin-bottom: 1rem;
+}
+
+.love {
+    color: black;
+    font-size: 2.5rem;
+    font-family: "century", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.you {
+    color: purple;
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: "century", sans-serif;
+}
+
+.mum {
+    color: white;
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+/* .first-page,  */
+.second-page, 
+.third-page,
+.fourth-page 
+{
+    display: none;
+}
+
+.note {
+    position: fixed;
+    bottom: 10px;
+    font-weight: bold;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
