@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+:root {
+    --very-dark-green: rgb(5, 11, 17);
+    --green: #39B54A;
+    --light-black: #010507;
+    --light-gray: #757575;
+    --lighter-gray: #E6E6E6;
+    --dark-gray: #555555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body, main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*Typography*/
+
+h1::after {
+    content: '.';
+    color: var(--green);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.icon {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+.down-arrow::before {
+    content: '\f078';
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    color: var(--green);
+    margin-right: 5px;
+}
+
+.brand::before, 
+.illustrate::before, 
+.web-dev::before, 
+.web::before, 
+.package::before, 
+.market::before {
+    display: block;
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    color: var(--green);
+}
+
+.brand::before { content: '\f1fc'; }
+.illustrate::before { content: '\f044'; }
+.market::before { content: '\f0a1'; }
+.web::before { content: '\f0ac'; }
+.package::before { content: '\f1b2'; }
+.web-dev::before { content: '\f1ad'; }
+
+.nav > h1 {
+    color: white;
+    font-size: 1.8em;
+    margin: 1rem;
+}
+
+.menu {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    z-index: 2;
+    background-color: black;
+    padding: .5rem;
+}
+
+.menu::after {
+    content: '\f0c9';
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+/*Layout*/
+
+section {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    overflow-x: hidden;
+}
+
+.menu-section {
+    position: relative;
+    background-color: var(--very-dark-green);
+    padding: 1rem;
+}
+
+.menu-section > a {
+    position: absolute;
+    color: white;
+    font-size: .8em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 700;
+    right: 3rem;
+    bottom: 0;
+    padding: 1rem 1rem 0 0;
+    border-right: 2px solid var(--green);
+}
+
+.line {
+    position: absolute;
+    border: 1px solid white;
+    top: -3px;
+    right: 48px;
+    height: 40px;
+}
+
+.content {
+    text-align: center;
+}
+
+.content > h2 {
+    color: var(--light-gray);
+    font-size: 1em;
+    margin-block: .7em;
+    letter-spacing: 2px;
+}
+
+.content > p {
+    width: 100%;
+    color: white;
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 3rem;
+    max-width: 700px;
+}
+
+.menu-btns {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+    margin-bottom: 4.2rem;
+}
+
+.menu-btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    letter-spacing: 1px;
+    padding: 1em;
+    font-size: .9em;
+    width: 90%;
+    text-align: center;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.menu-btn:hover {
+    color: var(--light-black);
+    background-color: white;
+}
+
+.container {
+    display: flex;
+}
+
+.social-icons {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+    height: 10%;
+    margin-top: 2rem;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons a::before {
+    opacity: 0;
+    position: absolute;
+    content: attr(name);
+    color: var(--green);
+    right: 1.8rem;
+    font-size: .8em;
+    transition: opacity 0.5s;
+}
+
+.social-icons a {
+    position: relative;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.social-icons a:hover::before {
+    opacity: 1;
+}
+
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--green);
+    padding-block: 8rem;
+    padding-inline: 2rem;
+}
+
+.about > h2 {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: .8rem;
+    color: var(--light-black);
+}
+
+.about > .bold {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e6e6e688; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about > p {
+    color: black;
+    font-size: 1.3em;
+    max-width: 830px;
+    font-family: 'Lora', serif;
+}
+
+.infos {
+    display: grid;
+    /* margin-inline: auto; */
+}
+
+.info {
+    padding-block: 2rem;
+    border-bottom: 1px solid #e6e6e688; 
+    text-align: center;
+}
+
+.info:last-child {
+    border-bottom: none;
+    border-right: none;
+}
+
+.info .number{
+    color: white;
+    font-weight: 800;
+    font-size: 5rem;
+}
+
+.info .title{
+    color: black;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.services {
+    align-items: center;
+    justify-content: center;
+    padding-block: 6rem;
+    text-align: center;
+    padding-inline: .5rem;
+}
+
+.services > h2 {
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+}
+
+.services > p {
+    color: black;
+    font-size: 2.3rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    border-bottom: 1.8px solid var(--lighter-gray);
+    width: 98%;
+}
+
+.services > article {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.service > h3 {
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+.service > p {
+    color: var(--light-gray);
+    font-size: 1.3em;
+    font-family: "Lora", serif;
+}
+
+.recent-works {
+    background-image: linear-gradient(to bottom, var(--light-black) 50%, white 50%);
+    align-items: center;
+    text-align: center;
+    padding-inline: 1rem;
+}
+
+.recent-works > h3 {
+    color: var(--green);
+    font-size: 1.2rem;
+    padding-block: 3rem;
+}
+
+.recent-works > p {
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20rem;
+    padding-bottom: 1rem;
+    border-bottom: 1.5px solid var(--dark-gray);
+}
+
+.team-members {
+    background-color: var(--lighter-gray);
+    padding-block: 2rem;
+}
+
+.team-members > h3 {
+    color: var(--green);
+    text-align: center;
+}
+
+.team-members .icon {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+    .menu::before {
+        content: 'MENU';
+        color: var(--green);
+        font-size: 1.2rem;
+        margin-right: .5rem;
+    }
+
+    .content {
+        text-align: left;
+        margin-left: 2rem;
+    }
+
+    .content > p {
+        margin-bottom: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about > .bold {
+        font-size: 3em;
+    }
+
+    .infos {
+        grid-template-columns: auto auto;
+        gap: 2rem;
+    }
+
+    .info:last-child {
+        border-bottom: 1px solid #e6e6e688; 
+    }
+
+    .services > article {
+        gap: .5rem;
+        grid-template-columns: repeat(2, 49%);
+        margin-left: 2rem;
+    }
+
+    .service {
+        position: relative;
+        text-align: left;
+    }
+
+    .service > h3 {
+        font-size: 1.8rem;
+        margin-bottom: .5rem;
+    }
+
+    .service > p {
+        font-size: 1.1rem;
+        max-width: 300px;
+        margin: 0;
+    }
+
+    .brand::before, 
+    .illustrate::before, 
+    .web-dev::before, 
+    .web::before, 
+    .package::before, 
+    .market::before {
+        display: inline-block;
+        margin-right: 1rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 820px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .content > p {
+        margin-bottom: 2rem;
+    }
+
+    .menu-text {
+        display: flex;
+        flex-direction: column;
+        max-width: 788px;
+    }
+
+    .menu-btns {
+        flex-direction: row;
+        margin-bottom: 2rem;
+        margin-left: 2.7rem;
+    }
+
+    .menu-btn {
+        width: 30%;
+        max-width: 230px;
+    }
+
+    .services > article {
+        gap: 3rem;
+    }
+
+    .brand::before, 
+    .illustrate::before, 
+    .web-dev::before, 
+    .web::before, 
+    .package::before, 
+    .market::before {
+        position: absolute;
+        left: -3rem;
+        top: 5px;
+    }
+
+    .recent-works > p {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .menu-text {
+        margin-left: 3rem;
+        margin-top: 3rem;
+    }
+
+    .content > h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .content > p {
+        max-width: none;
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    .social-icons {
+        position: absolute;
+        right: 1rem;
+        top: 10rem;
+    }
+
+    .menu-btns {
+        margin-left: 2rem;
+        margin-bottom: 8rem;
+    }
+
+    .menu-section > a {
+        padding-bottom: 3rem;
+        margin-right: 5rem;
+    }
+
+    .line {
+        right: 8rem;
+        height: 5rem;
+    }
+
+    .about > .bold {
+        font-size: 4em;
+    }
+
+    .infos {
+        grid-template-columns: repeat(4, auto);
+        margin-top: 4rem;
+        gap: 3rem;
+    }
+    
+    .info {
+        border: 0;
+        padding-right: 3rem;
+        border-right: 1px solid #e6e6e688; 
+    }
+
+    .info:first-child {
+        padding-left: 3rem;
+    }
+
+    .info:last-child {
+        border-bottom: none; 
+    }
+
+    .services > p {
+        font-size: 3rem;
+        max-width: 995px;
+    }
+
+    .service > h3 {
+        font-size: 2rem;
+    }
+
+    .service > p {
+        max-width: 400px;
+    }
+
+    .services > article {
+        gap: 4rem;
+    }
+
+    .recent-works > p {
+        font-size: 2.5rem;
+        max-width: 800px;
+    }
+}
